@@ -1,0 +1,107 @@
+.info-circle .circle {
+    background: #eee;
+    font-family: Arial;
+    width: 420px;
+    height: 420px;
+    margin: 128px auto;
+    border-radius: 50%;
+}
+
+.info-circle .circle .inner-circle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.info-circle .image {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    margin: auto;
+    z-index: -1;
+}
+
+.info-circle .info-block {
+    position: absolute;
+    width: 400px;
+}
+
+.info-circle .info-blocks > div:nth-of-type(1) {
+    top: 0px;
+    left: -290px;
+    text-align: right;
+}
+
+.info-circle .info-blocks > div:nth-of-type(2) {
+    top: 154px;
+    left: -370px;
+    text-align: right;
+}
+
+.info-circle .info-blocks > div:nth-of-type(3) {
+    top: 320px;
+    left: -290px;
+    text-align: right;
+}
+
+.info-circle .info-blocks > div:nth-of-type(4) {
+    top: 0px;
+    right: -290px;
+}
+
+.info-circle .info-blocks > div:nth-of-type(5) {
+    top: 154px;
+    right: -370px;
+}
+
+.info-circle .info-blocks > div:nth-of-type(6) {
+    top: 320px;
+    right: -290px;
+}
+
+.info-circle .info-block .info-icon {
+    background: #389AE5;
+    color: #fff;
+    text-align: center;
+    font-size: 24pt;
+    padding: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.info-circle .info-block .info-icon.left {
+    float: left;
+    margin-right: 16px;
+}
+
+.info-circle .info-block .info-icon.right {
+    float: right;
+    margin-left: 16px;
+}
+
+.info-circle .info-text {
+    float: left;
+    width: calc(100% - 96px);
+    margin-top: 4px;
+}
+
+.info-circle .info-text h5 {
+    font-size: 14pt;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.info-circle .info-text p {
+    color: #777;
+    line-height: 16pt;
+    margin: 0;
+}
+
