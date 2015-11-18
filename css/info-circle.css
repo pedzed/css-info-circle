@@ -1,13 +1,17 @@
-.info-circle .circle {
-    background: #eee;
+.info-circle {
     font-family: Arial;
+    margin: 128px auto;
+}
+
+.info-circle .outer-circle {
+    background: #eee;
     width: 420px;
     height: 420px;
-    margin: 128px auto;
+    margin: auto;
     border-radius: 50%;
 }
 
-.info-circle .circle .inner-circle {
+.info-circle .inner-circle {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -24,45 +28,48 @@
     transform: translateY(-50%);
     display: block;
     margin: auto;
-    z-index: -1;
+    /*z-index: -1;*/
+}
+
+.info-circle .info-blocks {
+    position: relative;
+    top: -400px;
+    width: 400px;
+    margin: auto;
 }
 
 .info-circle .info-block {
     position: absolute;
     width: 400px;
+    transition: .8s transform;
+}
+
+.info-circle .info-blocks > div:nth-of-type(odd) {
+    text-align: right;
 }
 
 .info-circle .info-blocks > div:nth-of-type(1) {
-    top: 0px;
-    left: -290px;
-    text-align: right;
+    transform: translate(-290px, 0);
 }
 
 .info-circle .info-blocks > div:nth-of-type(2) {
-    top: 154px;
-    left: -370px;
-    text-align: right;
+    transform: translate(290px, 0);
 }
 
 .info-circle .info-blocks > div:nth-of-type(3) {
-    top: 320px;
-    left: -290px;
-    text-align: right;
+    transform: translate(-368px, 154px);
 }
 
 .info-circle .info-blocks > div:nth-of-type(4) {
-    top: 0px;
-    right: -290px;
+    transform: translate(368px, 154px);
 }
 
 .info-circle .info-blocks > div:nth-of-type(5) {
-    top: 154px;
-    right: -370px;
+    transform: translate(-290px, 320px);
 }
 
 .info-circle .info-blocks > div:nth-of-type(6) {
-    top: 320px;
-    right: -290px;
+    transform: translate(290px, 320px);
 }
 
 .info-circle .info-block .info-icon {
@@ -76,12 +83,12 @@
     border-radius: 50%;
 }
 
-.info-circle .info-block .info-icon.left {
+.info-circle .info-blocks > div:nth-of-type(even) .info-icon {
     float: left;
     margin-right: 16px;
 }
 
-.info-circle .info-block .info-icon.right {
+.info-circle .info-blocks > div:nth-of-type(odd) .info-icon {
     float: right;
     margin-left: 16px;
 }
@@ -105,3 +112,30 @@
     margin: 0;
 }
 
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 1160px) {
+    .info-circle .info-blocks {
+        top: 48px;
+        width: calc(100% - 128px);
+        max-width: 420px;
+    }
+    
+    .info-circle .info-blocks > div:nth-of-type(n) {
+        position: static;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    
+    .info-circle .info-blocks > div:nth-of-type(odd) {
+        transform: translate(64px, 0);
+    }
+    
+    .info-circle .info-blocks > div:nth-of-type(even) {
+        transform: translate(-64px, 0);
+    }
+}
