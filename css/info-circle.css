@@ -27,8 +27,9 @@
     top: 50%;
     transform: translateY(-50%);
     display: block;
+    width: 100%;
+    padding: 96px;
     margin: auto;
-    /*z-index: -1;*/
 }
 
 .info-circle .info-blocks {
@@ -124,17 +125,17 @@
         width: calc(100% - 128px);
         max-width: 420px;
     }
-    
+
     .info-circle .info-blocks > div:nth-of-type(n) {
         position: static;
         width: 100%;
         margin-bottom: 32px;
     }
-    
+
     .info-circle .info-blocks > div:nth-of-type(odd) {
         transform: translate(64px, 0);
     }
-    
+
     .info-circle .info-blocks > div:nth-of-type(even) {
         transform: translate(-64px, 0);
     }
