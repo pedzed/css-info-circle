@@ -47,6 +47,8 @@
         height: 32px;
         border-radius: 50%;
         box-sizing: content-box; }
+        .info-circle .info-blocks .info-block .info-icon i {
+          display: block; }
     .info-circle .info-blocks > div:nth-of-type(even) .info-icon {
       float: left;
       margin-right: 16px; }
