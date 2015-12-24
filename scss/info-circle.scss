@@ -1,151 +1,154 @@
-.info-circle * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 .info-circle {
+    $circle-size: 420px;
+    $circle-thickness: 20px;
+    
     font-family: Arial;
     margin: 64px auto;
-}
-
-.info-circle .outer-circle {
-    background: #eee;
-    width: 420px;
-    height: 420px;
-    margin: auto;
-    border-radius: 50%;
-}
-
-.info-circle .inner-circle {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #fff;
-    width: 400px;
-    height: 400px;
-    margin: auto;
-    border-radius: 50%;
-}
-
-.info-circle .image {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    width: 100%;
-    padding: 96px;
-    margin: auto;
-}
-
-.info-circle .info-blocks {
-    position: relative;
-    top: -400px;
-    width: 400px;
-    margin: auto;
-}
-
-.info-circle .info-block {
-    position: absolute;
-    width: 400px;
-    transition: .8s transform;
-}
-
-.info-circle .info-blocks > div:nth-of-type(odd) {
-    text-align: right;
-}
-
-.info-circle .info-blocks > div:nth-of-type(1) {
-    transform: translate(-290px, 0);
-}
-
-.info-circle .info-blocks > div:nth-of-type(2) {
-    transform: translate(290px, 0);
-}
-
-.info-circle .info-blocks > div:nth-of-type(3) {
-    transform: translate(-368px, 154px);
-}
-
-.info-circle .info-blocks > div:nth-of-type(4) {
-    transform: translate(368px, 154px);
-}
-
-.info-circle .info-blocks > div:nth-of-type(5) {
-    transform: translate(-290px, 320px);
-}
-
-.info-circle .info-blocks > div:nth-of-type(6) {
-    transform: translate(290px, 320px);
-}
-
-.info-circle .info-block .info-icon {
-    background: #389AE5;
-    color: #fff;
-    text-align: center;
-    font-size: 24pt;
-    padding: 24px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-
-.info-circle .info-blocks > div:nth-of-type(even) .info-icon {
-    float: left;
-    margin-right: 16px;
-}
-
-.info-circle .info-blocks > div:nth-of-type(odd) .info-icon {
-    float: right;
-    margin-left: 16px;
-}
-
-.info-circle .info-text {
-    float: left;
-    width: calc(100% - 96px);
-    margin-top: 4px;
-}
-
-.info-circle .info-text h5 {
-    font-size: 14pt;
-    text-transform: uppercase;
-    color: #333;
-    margin: 0 0 8px 0;
-}
-
-.info-circle .info-text p {
-    color: #777;
-    line-height: 16pt;
-    margin: 0;
-}
-
-.clearfix:after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-@media screen and (max-width: 1160px) {
-    .info-circle .info-blocks {
-        top: 48px;
-        width: calc(100% - 128px);
-        max-width: 420px;
+    
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
     
-    .info-circle .info-blocks > div:nth-of-type(n) {
-        position: static;
+    .outer-circle {
+        background: #eee;
+        width: $circle-size;
+        height: $circle-size;
+        margin: auto;
+        border-radius: 50%;
+    }
+    
+    .inner-circle {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        width: $circle-size - $circle-thickness;
+        height: $circle-size - $circle-thickness;
+        margin: auto;
+        border-radius: 50%;
+    }
+    
+    .image {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
         width: 100%;
-        margin-bottom: 32px;
+        padding: 96px;
+        margin: auto;
     }
     
-    .info-circle .info-blocks > div:nth-of-type(odd) {
-        transform: translate(64px, 0);
+    .info-blocks {
+        position: relative;
+        top: -400px;
+        width: 400px;
+        margin: auto;
+        
+        .info-block {
+            position: absolute;
+            width: 400px;
+            transition: .8s transform;
+            
+            .info-icon {
+                background: #389AE5;
+                color: #fff;
+                text-align: center;
+                font-size: 24pt;
+                padding: 24px;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                -webkit-box-sizing: content-box;
+                -moz-box-sizing: content-box;
+                box-sizing: content-box;
+            }
+        }
+        
+        & > div:nth-of-type(even) .info-icon {
+            float: left;
+            margin-right: 16px;
+        }
+        
+        & > div:nth-of-type(odd) .info-icon {
+            float: right;
+            margin-left: 16px;
+        }
+        
+        & > div:nth-of-type(odd) {
+            text-align: right;
+        }
+        
+        & > div:nth-of-type(1) {
+            transform: translate(-290px, 0);
+        }
+        
+        & > div:nth-of-type(2) {
+            transform: translate(290px, 0);
+        }
+        
+        & > div:nth-of-type(3) {
+            transform: translate(-368px, 154px);
+        }
+        
+        & > div:nth-of-type(4) {
+            transform: translate(368px, 154px);
+        }
+        
+        & > div:nth-of-type(5) {
+            transform: translate(-290px, 320px);
+        }
+        
+        & > div:nth-of-type(6) {
+            transform: translate(290px, 320px);
+        }
     }
     
-    .info-circle .info-blocks > div:nth-of-type(even) {
-        transform: translate(-64px, 0);
+    .info-text {
+        float: left;
+        width: calc(100% - 96px);
+        margin-top: 4px;
+        
+        h5 {
+            font-size: 14pt;
+            text-transform: uppercase;
+            color: #333;
+            margin: 0 0 8px 0;
+        }
+        
+        p {
+            color: #777;
+            line-height: 16pt;
+            margin: 0;
+        }
+    }
+    
+    .clearfix:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    
+    @media screen and (max-width: 1160px) {
+        .info-blocks {
+            top: 48px;
+            width: calc(100% - 128px);
+            max-width: 420px;
+            
+            & > div:nth-of-type(n) {
+                position: static;
+                width: 100%;
+                margin-bottom: 32px;
+            }
+            
+            & > div:nth-of-type(odd) {
+                transform: translate(64px, 0);
+            }
+            
+            & > div:nth-of-type(even) {
+                transform: translate(-64px, 0);
+            }
+        }
     }
 }
