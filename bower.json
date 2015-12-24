@@ -1,0 +1,29 @@
+{
+  "name": "info-circle",
+  "description": "A pure, responsive HTML/CSS-only information circle.",
+  "version": "0.1",
+  "main": "css/info-circle.css",
+  "authors": [
+    "pedzed <pedzed+dev@outlook.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "info",
+    "circle",
+    "menu",
+    "list"
+  ],
+  "homepage": "https://github.com/pedzed/css-info-circle",
+  "ignore": [
+    "examples",
+    "images",
+    "node_modules",
+    ".bowerrc",
+    ".editorconfig",
+    ".gitignore",
+    "gulpfile.js",
+    "package.json"
+  ]
+}
