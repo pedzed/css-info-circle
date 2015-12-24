@@ -77,6 +77,8 @@
     float: left;
     width: calc(100% - 96px);
     margin-top: 4px; }
+    .info-circle .info-text.title-only {
+      margin-top: 30px; }
     .info-circle .info-text .title {
       font-size: 14pt;
       color: #333;
