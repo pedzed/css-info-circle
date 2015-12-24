@@ -77,15 +77,16 @@
     float: left;
     width: calc(100% - 96px);
     margin-top: 4px; }
-    .info-circle .info-text h5 {
+    .info-circle .info-text .title {
       font-size: 14pt;
-      text-transform: uppercase;
       color: #333;
       margin: 0 0 8px 0; }
-    .info-circle .info-text p {
+    .info-circle .info-text .text {
       color: #777;
       line-height: 16pt;
       margin: 0; }
+  .info-circle .text-upper {
+    text-transform: uppercase; }
   .info-circle .clearfix:after {
     content: '';
     display: table;

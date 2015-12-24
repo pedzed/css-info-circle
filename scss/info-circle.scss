@@ -110,18 +110,21 @@
         width: calc(100% - 96px);
         margin-top: 4px;
         
-        h5 {
+        .title {
             font-size: 14pt;
-            text-transform: uppercase;
             color: #333;
             margin: 0 0 8px 0;
         }
         
-        p {
+        .text {
             color: #777;
             line-height: 16pt;
             margin: 0;
         }
+    }
+    
+    .text-upper {
+        text-transform: uppercase;
     }
     
     .clearfix:after {
