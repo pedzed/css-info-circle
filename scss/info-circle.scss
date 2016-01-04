@@ -1,7 +1,11 @@
+$info-circle-size: 420px !default;
+$info-circle-thickness: 20px !default;
+$info-circle-border-background: #eee !default;
+$info-circle-inner-background: #fff !default;
+$info-circle-icon-background: #389AE5 !default;
+$info-circle-icon-color: #fff !default;
+
 .info-circle {
-    $circle-size: 420px;
-    $circle-thickness: 20px;
-    
     font-family: Arial;
     
     * {
@@ -11,9 +15,9 @@
     }
     
     .outer-circle {
-        background: #eee;
-        width: $circle-size;
-        height: $circle-size;
+        background: $info-circle-border-background;
+        width: $info-circle-size;
+        height: $info-circle-size;
         margin: auto;
         border-radius: 50%;
     }
@@ -22,9 +26,9 @@
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        background: #fff;
-        width: $circle-size - $circle-thickness;
-        height: $circle-size - $circle-thickness;
+        background: $info-circle-inner-background;
+        width: $info-circle-size - $info-circle-thickness;
+        height: $info-circle-size - $info-circle-thickness;
         margin: auto;
         border-radius: 50%;
     }
@@ -52,8 +56,8 @@
             transition: .8s transform;
             
             .info-icon {
-                background: #389AE5;
-                color: #fff;
+                background: $info-circle-icon-background;
+                color: $info-circle-icon-color;
                 text-align: center;
                 font-size: 24pt;
                 padding: 24px;
