@@ -1,7 +1,7 @@
 {
   "name": "info-circle",
   "description": "A pure, responsive HTML/CSS-only information circle.",
-  "version": "0.1",
+  "version": "0.1.1",
   "main": "css/info-circle.css",
   "authors": [
     "pedzed <pedzed+dev@outlook.com>"
