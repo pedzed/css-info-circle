@@ -1,6 +1,5 @@
 .info-circle {
-  font-family: Arial;
-  margin: 64px auto; }
+  font-family: Arial; }
   .info-circle * {
     box-sizing: border-box; }
   .info-circle .outer-circle {
